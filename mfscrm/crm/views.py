@@ -80,3 +80,10 @@ def service_edit(request, pk):
         # print("else")
         form = ServiceForm(instance=service)
         return render(request, 'crm/service_edit.html', {'form': form})
+
+
+@login_required
+def service_delete(request, pk):
+    service = get_object_or_404(Service, pk=pk)
+    service.delete()
+    return redirect('crm:service_list')
