@@ -59,7 +59,7 @@
                     <td>{{ customer.zipcode }}</td>
                     <td><a href="{% url 'crm:customer_edit' pk=customer.pk %}" class="btn btn-warning">Edit</a></td>
                     <td><a href="{% url 'crm:customer_delete' pk=customer.pk %}" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger">Delete</a></td>
-                    <td><a href="" class="btn btn-primary">Summary</a></td>
+                    <td><a href="{% url 'crm:summary' pk=customer.pk %}" class="btn btn-primary">Summary</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
