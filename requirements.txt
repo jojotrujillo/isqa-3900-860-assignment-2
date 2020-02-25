@@ -1,3 +1,8 @@
+setuptools
+wheel
 django==2.2.10
 django-crispy-forms
 django-mathfilters
+psycopg2==2.8.4
+gunicorn
+django-heroku
