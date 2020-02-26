@@ -1,1 +1,1 @@
-web: gunicorn mfscrm.wsgi --log-file -
+web: gunicorn mfscrm.mfscrm.wsgi --log-file -
