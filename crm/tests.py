@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import unittest
-from unittest import skip
 import time
 
 
@@ -16,7 +15,6 @@ class AdminTest(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
-    @skip
     def test_admin_login(self):
         driver = self.driver
 
@@ -30,7 +28,6 @@ class AdminTest(unittest.TestCase):
 
         assert 'Logged In'
 
-    @skip
     def test_add_customer(self):
         driver = self.driver
 
@@ -80,7 +77,6 @@ class UserLoginLogoutTest(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
-    @skip
     def test_user_login(self):
         driver = self.driver
 
@@ -96,7 +92,6 @@ class UserLoginLogoutTest(unittest.TestCase):
 
         assert 'Logged In'
 
-    @skip
     def test_user_logout(self):
         driver = self.driver
 
@@ -123,7 +118,6 @@ class CustomersTest(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
-    @skip
     def test_customer_list(self):
         driver = self.driver
 
@@ -145,7 +139,6 @@ class CustomersTest(unittest.TestCase):
 
         assert 'View List'
 
-    @skip
     def test_customer_edit(self):
         driver = self.driver
 
@@ -175,7 +168,6 @@ class CustomersTest(unittest.TestCase):
 
         assert 'Update Successful'
 
-    @skip
     def test_customer_delete(self):
         driver = self.driver
 
@@ -202,7 +194,6 @@ class CustomersTest(unittest.TestCase):
 
         assert 'Customer Deleted'
 
-    @skip
     def test_customer_summary(self):
         driver = self.driver
 
@@ -234,7 +225,6 @@ class ServicesTest(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
-    @skip
     def test_service_list(self):
         driver = self.driver
 
@@ -256,7 +246,6 @@ class ServicesTest(unittest.TestCase):
 
         assert 'View List'
 
-    @skip
     def test_service_edit(self):
         driver = self.driver
 
@@ -276,7 +265,7 @@ class ServicesTest(unittest.TestCase):
         time.sleep(2)
 
         driver.find_element_by_xpath('/html/body/div/div/div/div[3]/table/tbody/tr[2]/td[8]/a').click()  # Edit button
-        elem = driver.find_element_by_id('id_serice_category')
+        elem = driver.find_element_by_id('id_service_category')
         elem.send_keys(100 * Keys.BACKSPACE)
         elem.send_keys('Catering Service')
         elem = driver.find_element_by_id('id_location')
@@ -286,7 +275,6 @@ class ServicesTest(unittest.TestCase):
 
         assert 'Update Successful'
 
-    @skip
     def test_service_delete(self):
         driver = self.driver
 
@@ -313,7 +301,6 @@ class ServicesTest(unittest.TestCase):
 
         assert 'Service Deleted'
 
-    @skip
     def test_service_add(self):
         driver = self.driver
 
