@@ -10,7 +10,7 @@ PWORD = 'maverick1a'
 
 class AdminTest(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome('/mnt/c/users/jordon.trujillo/source/repos/chromedriver_win32/chromedriver.exe')
 
     def tearDown(self):
         self.driver.close()
@@ -72,7 +72,7 @@ class AdminTest(unittest.TestCase):
 
 class UserLoginLogoutTest(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome('/mnt/c/users/jordon.trujillo/source/repos/chromedriver_win32/chromedriver.exe')
 
     def tearDown(self):
         self.driver.close()
@@ -113,7 +113,7 @@ class UserLoginLogoutTest(unittest.TestCase):
 
 class CustomersTest(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome('/mnt/c/users/jordon.trujillo/source/repos/chromedriver_win32/chromedriver.exe')
 
     def tearDown(self):
         self.driver.close()
@@ -220,7 +220,7 @@ class CustomersTest(unittest.TestCase):
 
 class ServicesTest(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome('/mnt/c/users/jordon.trujillo/source/repos/chromedriver_win32/chromedriver.exe')
 
     def tearDown(self):
         self.driver.close()

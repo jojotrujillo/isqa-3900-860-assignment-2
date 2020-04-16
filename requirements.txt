@@ -6,3 +6,4 @@ django-mathfilters
 psycopg2==2.8.4
 gunicorn
 django-heroku
+djangorestframework
